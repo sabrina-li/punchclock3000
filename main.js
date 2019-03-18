@@ -11,6 +11,7 @@ firebase.initializeApp(config);
 
 $(document).ready(function (){
   var database = firebase.database();
+  
   $("#submitbtn").on('click',function(event){
       event.preventDefault();
       let name = "";
@@ -30,6 +31,8 @@ $(document).ready(function (){
         startDate:"startDate",
         rate:"rate"
       })
+
+
 
   })
 })
