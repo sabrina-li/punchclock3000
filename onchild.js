@@ -1,5 +1,6 @@
+var database = firebase.database();
 $(document).ready(function(){
-    database.on('child_added',function(childSnapshot){
+    database.ref().on('child_added',function(childSnapshot){
          // Log everything that's coming out of snapshot
      console.log(childSnapshot.val().name);
      console.log(childSnapshot.val().rate);
