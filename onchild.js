@@ -8,8 +8,8 @@ $(document).ready(function(){
         console.log(obj.rate);
         console.log(obj.role);
         console.log(obj.startDate);
-        obj.months_worked = 1;
-        obj.total_B = 1;
+        obj.months_worked = convertDate(obj.startDate);
+        obj.total_B = obj.months_worked * obj.rate;
 
      // full list of items to the well
      

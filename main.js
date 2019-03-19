@@ -74,3 +74,14 @@ function add_data(somedata){
     
   }
   
+
+
+function convertDate(date){
+  console.clear();
+  var now = moment(new Date()); //todays date
+  var end = moment(date); // another date
+  var duration = moment.duration(now.diff(end));
+  var months = duration.asMonths();
+  console.log(parseInt(months));
+  return parseInt(months);
+}
