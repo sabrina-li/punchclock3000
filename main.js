@@ -9,6 +9,8 @@ var config = {
 firebase.initializeApp(config);
 
 
+
+
 $(document).ready(function (){
   var database = firebase.database();
 
@@ -31,12 +33,9 @@ $(document).ready(function (){
         startDate:startDate,
         rate:rate
       })
-
-
-
   })
-})
 
+})
 function add_data(somedata){ 
 
   var name = somedata.name
@@ -45,10 +44,10 @@ function add_data(somedata){
   var months_worked = somedata.months_worked
   var monthly_R = somedata.rate
   var total_B = somedata.total_B
-  
+  var id = somedata.key;
   
          var a = $('<div>')
-         a.append( ` <div class="row form-group">
+         a.append( ` <div class="row form-group employeerow">
          <div class="col col-sm-2">
                <div id="e_name" class="title_text">${name}</div>         
        </div>
@@ -67,17 +66,26 @@ function add_data(somedata){
        <div class="col col-sm-2">
                       <div id="e_total" class="title_text">${total_B}</div>  
        </div>
+       <div class="buttons" id="${id}">
+          <button class="btn btn-primary ml-3" id="editdeletebtn">edit</button>
+          <button class="btn btn-primary ml-3" id="deletebtn">delete</button>
+       </div>
    
     </div>`);
-    
+    $(a.children()[0]).hover(function (event) {
+      console.log($(this))
+      $(this).children(".buttons").css("display","initial");
+    }, function(){
+      $(this).children(".buttons").css("display","none");
+    })
+
     $("#row_id").append(a)
-    
   }
   
 
 
 function convertDate(date){
-  console.clear();
+  // console.clear();
   var now = moment(new Date()); //todays date
   var end = moment(date); // another date
   var duration = moment.duration(now.diff(end));
@@ -85,3 +93,14 @@ function convertDate(date){
   console.log(parseInt(months));
   return parseInt(months);
 }
+
+
+
+//   $("#crystal_1img").hover(
+//     function(){
+//         $(this).animate({ "width" : "70%", "height" : $("#crystal_1img").height() + "px" });
+//     },
+//     function(){
+//         $(this).animate({ "width" : "50%", "height" : "70px" });
+//     }
+// );
