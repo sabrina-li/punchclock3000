@@ -36,3 +36,41 @@ $(document).ready(function (){
 
   })
 })
+
+function add_data(somedata){ 
+
+  var name = somedata.name
+  var role = somedata.role
+  var start_date = somedata.start_date
+  var months_worked = somedata.months_worked
+  var monthly_R = somedata.monthly_R
+  var total_B = somedata.total_B
+  
+  
+         var a = $('<div>')
+         a.appned( ` <div class="row form-group">
+         <div class="col col-sm-2">
+               <div id="e_name" class="title_text">${name}</div>         
+       </div>
+         <div class="col col-sm-2">
+           <div  id="e_role" class="title_text">${role}</div>  
+         </div>
+         <div class="col col-sm-2">
+           <div id="e_sdate" class="title_text">${start_date}</div>  
+         </div>
+         <div class="col col-sm-2">
+              <div  id="e_mworked" class="title_text">${months_worked}</div>  
+             </div>
+       <div class="col col-sm-2">
+                   <div id="e_mrate" class="title_text">${monthly_R}</div>  
+                 </div>
+       <div class="col col-sm-2">
+                      <div id="e_total" class="title_text">${total_B}</div>  
+       </div>
+   
+    </div>`);
+    
+    $("#row_id").append(a)
+    
+  }
+  
