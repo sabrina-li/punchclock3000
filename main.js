@@ -41,14 +41,14 @@ function add_data(somedata){
 
   var name = somedata.name
   var role = somedata.role
-  var start_date = somedata.start_date
+  var start_date = somedata.startDate
   var months_worked = somedata.months_worked
-  var monthly_R = somedata.monthly_R
+  var monthly_R = somedata.rate
   var total_B = somedata.total_B
   
   
          var a = $('<div>')
-         a.appned( ` <div class="row form-group">
+         a.append( ` <div class="row form-group">
          <div class="col col-sm-2">
                <div id="e_name" class="title_text">${name}</div>         
        </div>

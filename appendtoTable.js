@@ -4,21 +4,20 @@ function appendtotable(emp){
                     <div class="title_text">${emp.name} }</div>
                     </div>
                     <div class="col col-sm-2">
-                    <div class="title_text">${emp.email}</div>
+                    <div class="title_text">${emp.role}</div>
                     </div>
                     <div class="col col-sm-2">
-                    <div class="title_text">Start Date</div>
+                    <div class="title_text">${emp.startDate}</div>
                     </div>
                     <div class="col col-sm-2">
-                    <div class="title_text">Months Worked</div>
+                    <div class="title_text">${emp.monthworkd}</div>
                     </div>
                     <div class="col col-sm-2">
-                    <div class="title_text">Monthly Rate ($)</div>
+                    <div class="title_text">${emp.rate}}</div>
                     </div>
                     <div class="col col-sm-2">
-                    <div class="title_text">Total Billed</div>
+                    <div class="title_text">${emp.total}</div>
                     </div>
-
                 </div>`
 }
 
