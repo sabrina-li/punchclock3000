@@ -13,7 +13,6 @@ $(document).ready(function(){
         obj.key = childSnapshot.key;
 
      // full list of items to the well
-     
      add_data(obj);
     // $("#full-member-list").append();
 

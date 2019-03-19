@@ -98,11 +98,7 @@ function convertDate(date){
 $(document).on('click','#editdeletebtn', function(){
   console.log($(this).parent().attr("id"));
 })
-//   $("#crystal_1img").hover(
-//     function(){
-//         $(this).animate({ "width" : "70%", "height" : $("#crystal_1img").height() + "px" });
-//     },
-//     function(){
-//         $(this).animate({ "width" : "50%", "height" : "70px" });
-//     }
-// );
+
+$(document).on('click','#deletebtn', function(){
+  console.log($(this).parent().attr("id"));
+})
