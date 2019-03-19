@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 $(document).ready(function (){
   var database = firebase.database();
-  
+
   $("#submitbtn").on('click',function(event){
       event.preventDefault();
       let name = "";
@@ -26,10 +26,10 @@ $(document).ready(function (){
       rate = $("#monthlyRate").val().trim();
 
       database.ref().push({
-        name:"name",
-        role:"role",
-        startDate:"startDate",
-        rate:"rate"
+        name:name,
+        role:role,
+        startDate:startDate,
+        rate:rate
       })
 
 
